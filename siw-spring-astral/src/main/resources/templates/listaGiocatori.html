@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista Giocatori</title>
+</head>
+<body>
+	<div th:each="giocatore : ${giocatori}">
+		<a href="giocatore.html" 
+		th:href="@{'/giocatore/' + ${giocatore.id}}"
+		th:text="|${giocatore.nome} ${giocatore.cognome}|"></a>
+	</div>
+</body>
+</html>

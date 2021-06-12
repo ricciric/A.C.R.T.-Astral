@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Giocatore {
 
@@ -22,7 +24,7 @@ public class Giocatore {
 	@Column(nullable = false)
 	private String cognome;
 
-	@Column
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private LocalDate dataDiNascita;
 
 	@Column

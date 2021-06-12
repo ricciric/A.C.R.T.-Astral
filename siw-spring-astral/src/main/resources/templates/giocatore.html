@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="|${giocatore.nome} ${giocatore.cognome}|">Giocatore nome e cognome</title>
+</head>
+<body>
+	<div class="info" th:object="${giocatore}"><span class = nome_giocatore th:text="|*{nome} *{cognome}|"></span>
+		<div>Data di nascita: <span th:text="*{{dataDiNascita}}">nascita</span></div>
+		<div>Nazionalit&agrave: <span th:text="*{nazionalita}">nazionalita</span></div>
+		<div>Altezza: <span th:text="*{altezza}">altezza</span> m</div>
+		<div>Peso: <span th:text="*{peso}">peso</span> Kg</div>
+		<div>Ruolo: <span th:text="*{ruolo}">ruolo</span></div>
+		<div>Categoria: <a href="categoria.html" th:text="*{categoria}">categoria</a></div>
+	</div>
+</body>
+</html>
