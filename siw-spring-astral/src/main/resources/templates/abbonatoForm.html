@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Abbonato</title>
+</head>
+<body>
+ 	<div><h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T. Astral!</h3></div>
+	<form th:action="@{/abbonato}" method="POST">
+		<div class="container">
+			<div>
+				<span>Nome:</span> <span><input type="text"
+					th:field="${abbonato.nome}" required /></span>
+			</div>
+			<div>
+				<span>Cognome:</span> <span><input type="text"
+					th:field="${abbonato.cognome}" required /></span>
+			</div>
+			<div>
+				<span>Data di nascita:</span> <span><input type="date"
+					th:field="${abbonato.dataNascita}" required /></span>
+			</div>
+			<div>
+				<span><button type="submit">Invia</button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
