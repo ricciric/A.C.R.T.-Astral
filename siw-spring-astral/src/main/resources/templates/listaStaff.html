@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista Staff</title>
+</head>
+<body>
+	<div th:each="staff : ${staff}">
+		<span th:text="|${staff.nome} ${staff.cognome}|"> <a th:href="@{'/categoria/' + ${staff.categoria.id}}" th:text=${staff.categoria}>Ancora categoria</a></span>
+	</div>
+</body>
+</html>
