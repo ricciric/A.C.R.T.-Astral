@@ -8,7 +8,7 @@
 	<div th:each="giocatore : ${giocatori}">
 		<a href="giocatore.html" 
 		th:href="@{'/giocatore/' + ${giocatore.id}}"
-		th:text="|${giocatore.nome} ${giocatore.cognome}|"></a>
+		th:text="|${giocatore.nome} ${giocatore.cognome}|"></a><span th:text="${giocatore.categoria.nome}"></span>
 	</div>
 </body>
 </html>
