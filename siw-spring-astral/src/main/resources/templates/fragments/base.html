@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles(title)">
+<meta charset="UTF-8" />
+<link th:href="@{/css/base.css}" rel="stylesheet">
+<title th:text="${title}"></title>
+</head>
+<body>
+	<nav th:fragment="header">
+		<div id="flex-containerHeader">
+			<div class="header">
+				<a th:href="@{'/'}">A.C.R.T. Astral<strong></strong></a>
+			</div>
+		</div>
+	</nav>
+	<header th:fragment="navigation">
+		<div id="flex-containerNav">
+			<div class="col">
+				<a href="#"><strong>Categorie</strong></a>
+			</div>
+			<div class="col">
+				<a  href="#"><strong>Abbonamenti</strong></a>
+			</div>
+			<div class="col">
+				<a  href="#"><strong>Trofei</strong></a>
+			</div>
+			<div class="col">
+				<a  href="#"><strong>Staff</strong></a>
+			</div>
+			<div class="col">
+				<a  href="#"><strong>Contatti</strong></a>
+			</div>
+		</div>
+	</header>
+	<footer th:fragment="footer">
+		<div id="flex-containerFooter">
+			<div class="Foot">
+				<p6>Siw - A.C.R.T. Astral - ©Mainella Francesco @Marasca Riccardo @Spizzichino Riccardo - 2021</p6>
+			</div>
+			</div>
+	</footer>
+</body>
+</html>
+
