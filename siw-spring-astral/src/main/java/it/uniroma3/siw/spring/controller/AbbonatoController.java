@@ -22,7 +22,7 @@ public class AbbonatoController {
 		return "abbonatoForm.html";
 	}
 	
-	@RequestMapping(value ="/abbonato", method = RequestMethod.GET)
+	@RequestMapping(value ="/abbonato", method = RequestMethod.POST)
 	public String saveAbbonato(@ModelAttribute("abbonato") Abbonato abbonato, Model model) {
 		this.abbonatoService.inserisci(abbonato);
 		model.addAttribute("abbonato", abbonato);
