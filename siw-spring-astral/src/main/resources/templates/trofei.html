@@ -2,13 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link th:href="@{/css/trofeo.css}" rel="stylesheet">
 <title>Trofei</title>
 </head>
 <body>
 	<div th:each="trofeo : ${trofei}">
+	<div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}} + '.jpg'"></div>
 	<div th:text="${trofeo.nome}"></div>
-	<div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}}"></div>
-	<div><span th:text="${trofeo.nome}"></span><span></span><span id=numeroVittorie th:text={{trofeo.numeroVittorie}}></span></div>
+	<div class="numeroVittorie" th:text="${{trofeo.numeroVittorie}}"></div>
 	</div>
 </body>
 </html>

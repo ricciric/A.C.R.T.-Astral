@@ -16,9 +16,6 @@ public class Trofeo {
 
 	@Column(nullable = false)
 	private String nome;
-
-	@Column(nullable = false)
-	private String anno;
 	
 	@ManyToOne
 	private Societa societa;
@@ -28,9 +25,8 @@ public class Trofeo {
 	public Trofeo() {
 	}
 
-	public Trofeo(String nome, String anno, Integer numeroVittorie) {
+	public Trofeo(String nome, Integer numeroVittorie) {
 		this.nome = nome;
-		this.anno = anno;
 		this.numeroVittorie=numeroVittorie;
 	}
 
@@ -57,14 +53,6 @@ public class Trofeo {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getAnno() {
-		return anno;
-	}
-
-	public void setAnno(String anno) {
-		this.anno = anno;
 	}
 
 	public Societa getSocieta() {
