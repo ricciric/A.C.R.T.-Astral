@@ -22,13 +22,25 @@ public class Trofeo {
 	
 	@ManyToOne
 	private Societa societa;
+	
+	private Integer numeroVittorie;
 
 	public Trofeo() {
 	}
 
-	public Trofeo(String nome, String anno) {
+	public Trofeo(String nome, String anno, Integer numeroVittorie) {
 		this.nome = nome;
 		this.anno = anno;
+		this.numeroVittorie=numeroVittorie;
+	}
+
+	
+	public Integer getNumeroVittorie() {
+		return numeroVittorie;
+	}
+
+	public void setNumeroVittorie(Integer numeroVittorie) {
+		this.numeroVittorie = numeroVittorie;
 	}
 
 	public Long getId() {
