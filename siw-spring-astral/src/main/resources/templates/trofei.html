@@ -8,7 +8,7 @@
 	<div th:each="trofeo : ${trofei}">
 	<div th:text="${trofeo.nome}"></div>
 	<div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}}"></div>
-	<div id=numeroVittorie th:text={{trofeo.numeroVittorie}}></div>
+	<div><span th:text="${trofeo.nome}"></span><span></span><span id=numeroVittorie th:text={{trofeo.numeroVittorie}}></span></div>
 	</div>
 </body>
 </html>
