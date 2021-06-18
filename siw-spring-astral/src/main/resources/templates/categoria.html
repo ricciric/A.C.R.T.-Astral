@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<link th:href="@{/css/categoria.css}" rel="stylesheet">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h1><span th:text="${categoria.nome}">a</span></h1>
+  <div id = "immagine"> a
+    </div>
+  <div class = "anagrafica">
+    <ul id = "anagrafica">
+      <li th:text="${categoria.nome}">nome</li>
+      <li th:text="${categoria.descrizione}">descrizione</li>
+      <li th:text="${categoria.allenatore}">allenatore</li>
+    </ul>
+  </div>
+  <div id = "giocatore">
+    CALCIATORI
+  </div>
+  <div id = "caratteristiche">
+    <ul th:each="giocatore : ${giocatori}">
+      <li><a th:href ="'/giocatore/' + ${giocatore.id}"><span th:text="|${giocatore.nome} ${giocatore.cognome}|">Nome Cognome</span></a><span th:text="${giocatore.ruolo}"> Ruolo</span></li>
+    </ul>
+  </div>
+</body>
+</html>
