@@ -3,6 +3,7 @@
 <head th:fragment="headerfiles(title)">
 <meta charset="UTF-8" />
 <link th:href="@{/css/base.css}" rel="stylesheet">
+<link th:href="@{'/css/' + (title) + '.css'}" rel = "stylesheet">
 <title th:text="${title}"></title>
 </head>
 <body>
@@ -19,13 +20,13 @@
 				<a href="#"><strong>Categorie</strong></a>
 			</div>
 			<div class="col">
-				<a  href="#"><strong>Abbonamenti</strong></a>
+				<a   th:href="@{'/newAbbonato'}"><strong>Abbonamenti</strong></a>
 			</div>
 			<div class="col">
-				<a  href="#"><strong>Trofei</strong></a>
+				<a  th:href="@{'/listaTrofei'}"><strong>Trofei</strong></a>
 			</div>
 			<div class="col">
-				<a  href="#"><strong>Staff</strong></a>
+				<a  th:href="@{'/listaStaff'}"><strong>Staff</strong></a>
 			</div>
 			<div class="col">
 				<a  href="#"><strong>Contatti</strong></a>
