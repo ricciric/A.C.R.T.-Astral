@@ -7,20 +7,30 @@
 <title th:text="${title}"></title>
 </head>
 <body>
-	<nav th:fragment="header">
+	<header th:fragment="header">
 		<div id="flex-containerHeader">
 			<div class="header">
-				<a th:href="@{'/'}">A.C.R.T. Astral<strong></strong></a>
+				<a th:href="@{'/'}"><p1><strong>A.C.R.T. ASTRAL</strong></p1></a>
 			</div>
 		</div>
-	</nav>
-	<header th:fragment="navigation">
+	</header>
+	<nav th:fragment="navigation">
 		<div id="flex-containerNav">
-			<div class="col">
+			<div class="menu">
 				<a href="#"><strong>Categorie</strong></a>
+				<div class="contenutiMenu">
+				<a href="#">Categoria 1</a>
+   			 	<a href="#">Categoria 2</a>
+    			<a href="#">Categoria 3</a>
+    			<a href="#">Categoria 4</a>
+				</div>
 			</div>
-			<div class="col">
-				<a   th:href="@{'/newAbbonato'}"><strong>Abbonamenti</strong></a>
+			<div class="menu">
+				<a href="#"><strong>Abbonamenti</strong></a>
+				<div class="contenutiMenu">
+				<a href="#">Perchè abbonarti</a>
+   			 	<a th:href="@{'/newAbbonato'}">Form abbonato</a>
+				</div>
 			</div>
 			<div class="col">
 				<a  th:href="@{'/listaTrofei'}"><strong>Trofei</strong></a>
@@ -32,7 +42,7 @@
 				<a  href="#"><strong>Contatti</strong></a>
 			</div>
 		</div>
-	</header>
+	</nav>
 	<footer th:fragment="footer">
 		<div id="flex-containerFooter">
 			<div class="Foot">

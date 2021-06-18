@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<link th:href="@{/css/home.css}" rel="stylesheet">
-<title>JS Bin</title>
+<link th:href="@{/css/base.css}" rel="stylesheet">
+<title>A.C.R.T. ASRTAL</title>
 </head>
 <body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<div>
 		<a th:href="@{'/listaGiocatori'}">Lista Giocatori</a>
 	</div>
