@@ -5,6 +5,8 @@
 <title>Lista Giocatori</title>
 </head>
 <body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<div th:each="giocatore : ${giocatori}">
 		<a href="giocatore.html" 
 		th:href="@{'/giocatore/' + ${giocatore.id}}"

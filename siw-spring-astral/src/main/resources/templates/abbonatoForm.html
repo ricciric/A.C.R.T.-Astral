@@ -2,10 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link th:href="@{/css/abbonatoForm.css}" rel="stylesheet">
 <title>Form Abbonato</title>
 </head>
 <body>
- 	<div><h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T. Astral!</h3></div>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<div>
+		<h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T.
+			Astral!</h3>
+	</div>
 	<form th:action="@{/abbonato}" method="POST">
 		<div class="container">
 			<div>

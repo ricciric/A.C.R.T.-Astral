@@ -5,6 +5,8 @@
 <title>Lista Staff</title>
 </head>
 <body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<div th:each="staff : ${staff}">
 		<span th:text="|${staff.nome} ${staff.cognome}|"> <a th:href="@{'/categoria/' + ${staff.categoria.id}}" th:text=${staff.categoria}>Ancora categoria</a></span>
 	</div>
