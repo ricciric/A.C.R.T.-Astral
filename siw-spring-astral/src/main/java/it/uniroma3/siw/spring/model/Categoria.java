@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -28,8 +27,6 @@ public class Categoria {
 	@OneToOne
 	private MembroStaff allenatore;
 	
-	@ManyToOne
-	private Societa societa;
 
 	@OneToMany(mappedBy = "categoria")
 	private List<Giocatore> giocatori;
@@ -76,13 +73,6 @@ public class Categoria {
 		this.allenatore = allenatore;
 	}
 
-	public Societa getSocieta() {
-		return societa;
-	}
-
-	public void setSocieta(Societa societa) {
-		this.societa = societa;
-	}
 
 	public List<Giocatore> getGiocatori() {
 		return giocatori;

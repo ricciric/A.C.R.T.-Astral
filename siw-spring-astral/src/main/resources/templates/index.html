@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link th:href="@{/css/base.css}" rel="stylesheet">
-<title>A.C.R.T. ASRTAL</title>
+<head th:replace="/fragments/base.html :: headerfiles(home)">
 </head>
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<div>
 		<a th:href="@{'/listaGiocatori'}">Lista Giocatori</a>
-	</div>
 	</div>
 	<p id="testoPresentativo">
 	<h1>Chi siamo</h1>

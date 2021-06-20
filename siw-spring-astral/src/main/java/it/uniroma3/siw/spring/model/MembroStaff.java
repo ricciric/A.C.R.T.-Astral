@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -34,9 +33,6 @@ public class MembroStaff {
 
 	@Column(nullable = false)
 	private String ruolo;
-	
-	@ManyToOne
-	private Societa societa;
 	
 	@OneToOne
 	private Categoria categoria;
@@ -110,13 +106,6 @@ public class MembroStaff {
 		this.ruolo = ruolo;
 	}
 
-	public Societa getSocieta() {
-		return societa;
-	}
-
-	public void setSocieta(Societa societa) {
-		this.societa = societa;
-	}
 
 	public Categoria getCategoria() {
 		return categoria;

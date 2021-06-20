@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -31,9 +30,6 @@ public class Dirigente {
 
 	@Column(nullable = false)
 	private String carica;
-	
-	@ManyToOne 
-	private Societa societa;
 
 	public Dirigente() {
 	}
@@ -94,12 +90,5 @@ public class Dirigente {
 		this.carica = carica;
 	}
 
-	public Societa getSocieta() {
-		return societa;
-	}
-
-	public void setSocieta(Societa societa) {
-		this.societa = societa;
-	}
 
 }

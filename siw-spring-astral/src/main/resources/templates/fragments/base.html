@@ -3,14 +3,14 @@
 <head th:fragment="headerfiles(title)">
 <meta charset="UTF-8" />
 <link th:href="@{/css/base.css}" rel="stylesheet">
-<link th:href="@{'/css/' + (title) + '.css'}" rel = "stylesheet">
+<link th:href="@{'/css/' + ${title} + '.css'}" rel = "stylesheet">
 <title th:text="${title}"></title>
 </head>
 <body>
 	<header th:fragment="header">
 		<div id="flex-containerHeader">
 			<div class="header">
-				<a th:href="@{'/'}"><p1><strong>A.C.R.T. ASTRAL</strong></p1></a>
+				<a th:href="@{'/'}"></a>
 			</div>
 		</div>
 	</header>
