@@ -4,7 +4,8 @@
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
-	<div><h3><span th:text="${abbonato.nome}"></span>, Grazie per esserti registrato. Ora fai parte anche tu della A.C.R.T. Astral</h3></div>
+	<div><h3><span th:text="${user.nome}"></span>, Grazie per esserti registrato. Ora puoi navigare nel sito web della A.C.R.T. Astral. Non perderti la possibilità di abbonarti!</h3></div>
 	<div><h6>Visualizza la <a th:href="@{/abbonati}">lista degli abbonati</a></h6></div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>

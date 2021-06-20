@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="ISO-8859-1">
-<link th:href="@{/css/trofeo.css}" rel="stylesheet">
-<title>Trofei</title>
+<head th:replace="/fragments/base.html :: headerfiles(trofeo)">
 </head>
 <body>
 	<div th:each="trofeo : ${trofei}">

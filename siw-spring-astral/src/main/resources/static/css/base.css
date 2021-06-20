@@ -21,10 +21,7 @@ body {
 }
 
 div.header {
-	background-image:url("/images/logo.jpg");
-	background-size:100% 100%;
-	background-position:center;
-	width:7%;
+	width:7.5%;
 	height: 140px;
 	margin-top: 30px;
 	margin-left: 20px;

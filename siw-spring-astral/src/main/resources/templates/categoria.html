@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-<link th:href="@{/css/categoria.css}" rel="stylesheet">
-  <title>JS Bin</title>
-</head>
+<head th:replace="/fragments/base.html :: headerfiles(categoria)">
 <body>
   <h1><span th:text="${categoria.nome}">a</span></h1>
   <div id = "immagine"> a
