@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/base.html :: headerfiles(form)">
+<body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<section>
+		<div class="container">
+			<h1>Modifica trofeo</h1>
+			<form th:object="${trofeo}" th:action="@{'/modificaTrofeo/' + *{id}}" method="POST">
+				<table>
+					<tr>
+						<td>Nome:</td> <td><input type="text"
+							th:field="*{nome}" /></td> <td th:if="${#fields.hasErrors('nome')}"
+							th:errors="*{nome}" th:style="'color:red'"></td>
+					</tr>
+					<tr>
+						<td>Numero di vittorie</td>
+						<td><input type="text" placeholder="numeroVittore" required
+							th:field="*{numeroVittorie}" /></td>
+						<td th:if="${#fields.hasErrors('numeroVittorie')}"
+							th:errors="*{numeroVittorie}" th:style="'color:red'"></td>
+					</tr>
+					<tr>
+						<td>
+							<button type="submit">Invia</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</section>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

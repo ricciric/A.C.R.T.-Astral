@@ -1,6 +1,7 @@
 package it.uniroma3.siw.spring.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -15,12 +16,24 @@ public class TrofeoService {
 
 	@Autowired
 	private TrofeoRepository trofeoRepository;
+	
+	@Transactional
+	public Trofeo inserisci(Trofeo trofeo) {
+		return this.trofeoRepository.save(trofeo);
+	}
 
 	@Transactional
 	public List<Trofeo> tutti(){
 		return (List<Trofeo>) this.trofeoRepository.findAll();
 	}
 	
-	
-
+	@Transactional
+	public Trofeo trofeoPerId(Long id) {
+		Optional<Trofeo> optional = this.trofeoRepository.findById(id);
+		if(optional.isPresent()) {
+			return optional.get();
+		}
+		else 
+			return null;
+	}
 }

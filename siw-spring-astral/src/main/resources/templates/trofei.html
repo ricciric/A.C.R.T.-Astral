@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:replace="/fragments/base.html :: headerfiles(trofeo)">
 </head>
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
-  <div id = "container">
-	<div class = "trofeo" th:each="trofeo : ${trofei}">
-      <div class= "nome_trofeo" th:text="${trofeo.nome}">Champions</div>
-	  <div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}} + '.jpg'"></div>
-	  <div class="numeroVittorie" th:text="${{trofeo.numeroVittorie}}">10</div>
+	<div id="container">
+		<div class="trofeo" th:each="trofeo : ${trofei}">
+			<div class="nome_trofeo" th:text="${trofeo.nome}">Champions</div>
+			<div>
+				<img th:src="@{'/images/trofeo/' + ${trofeo.nome}} + '.jpg'">
+			</div>
+			<div class="numeroVittorie" th:text="${{trofeo.numeroVittorie}}">10</div>
+			<div sec:authorize="hasAuthority('ADMIN')">
+				<a th:href="'/modificaTrofeo/' + ${trofeo.id}"><button>
+						Modifica Trofeo</button></a>
+			</div>
+		</div>
 	</div>
-  </div>
-  	<footer th:replace="fragments/base.html :: footer"></footer>
+	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>
