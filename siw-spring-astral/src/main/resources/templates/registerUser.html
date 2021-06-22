@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/fragments/base.html :: headerfiles(registrazioneSuccesso)">
+<head th:replace="/fragments/base.html :: headerfiles(form)">
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<section>
-		<div id="corpo">
+		<div class="container">
 			<h1>Sottoscrivi abbonamento</h1>
 			<form th:action="@{/register}" method="POST">
 				<table>

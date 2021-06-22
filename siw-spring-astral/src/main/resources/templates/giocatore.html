@@ -4,30 +4,44 @@
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
-  <div id="infoo">Informazioni sul nostro giocatore:</div>
-	<div class="info" th:object="${giocatore}">
-        <div class="border">    
-      <span>Nome e cognome: </span><span class="giocatore" th:text="|*{nome} *{cognome}|">ciao</span>
-        </div>
-		<div class="border">
-			Data di nascita: <span class="giocatore" th:text="*{{dataDiNascita}}">nascita</span>
+	<section>
+		<div class="pagina">
+			<div id="infoo">Informazioni sul nostro giocatore:</div>
+			<div class="info" th:object="${giocatore}">
+				<div class="border">
+					<span>Nome e cognome: </span><span class="giocatore"
+						th:text="|*{nome} *{cognome}|">ciao</span>
+				</div>
+				<div class="border">
+					Data di nascita: <span class="giocatore"
+						th:text="*{{dataDiNascita}}">nascita</span>
+				</div>
+				<div class="border">
+					Nazionalit&agrave: <span class="giocatore" th:text="*{nazionalita}">nazionalità</span>
+				</div>
+				<div class="border">
+					Altezza: <span class="giocatore" th:text="*{altezza}">altezza</span><span
+						class="unita"> m</span>
+				</div>
+				<div class="border">
+					Peso: <span class="giocatore" th:text="*{peso}">peso</span><span
+						class="unita"> Kg</span>
+				</div>
+				<div class="border">
+					Ruolo: <span class="giocatore" th:text="*{ruolo}">ruolo</span>
+				</div>
+				<div class="border">
+					Categoria: <a class="giocatore"
+						th:href="'/categoria/' + *{categoria.id}"
+						th:text="*{categoria.nome}">categoria</a>
+				</div>
+				<div class="logo">
+					<a class="logo" th:href="@{'/'}"><img
+						th:src="@{/images/logo.jpg}" width=100% height=100%></img></a>
+				</div>
+			</div>
 		</div>
-		<div class="border">
-			Nazionalit&agrave: <span class="giocatore" th:text="*{nazionalita}">nazionalità</span>
-		</div>
-		<div class="border">
-          Altezza: <span class="giocatore" th:text="*{altezza}">altezza</span><span class="unita"> m</span>
-		</div>
-		<div class="border">
-          Peso: <span class="giocatore" th:text="*{peso}">peso</span><span class="unita"> Kg</span>
-		</div>
-		<div class="border">
-			Ruolo: <span class="giocatore" th:text="*{ruolo}">ruolo</span>
-		</div>
-		<div class="border">
-			Categoria: <a class="giocatore" th:href="'/categoria/' + *{categoria.id}" th:text="*{categoria.nome}">categoria</a>
-		</div>
-	</div>
-  	<a class="logo" th:href="@{'/'}"><img th:src="@{/images/logo.jpg}" width=100% height=100%></img></a>
+	</section>
+	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>

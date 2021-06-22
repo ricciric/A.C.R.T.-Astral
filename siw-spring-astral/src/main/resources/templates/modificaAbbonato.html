@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/fragments/base.html :: headerfiles(abbonatoForm)">
+<head th:replace="/fragments/base.html :: headerfiles(form)">
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
-	<div>
-		<h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T.
-			Astral!</h3>
-	</div>
-	<form th:action="@{/modificaAbbonato}" method="POST" th:object="${user}">
-		<div class="container">
-			<div>
-				<span>Nome:</span> <span><input type="text" 
-					th:field="*{nome}" th:value="*{nome}" required /></span>
-			</div>
-			<div>
-				<span>Cognome:</span> <span><input type="text"
-					th:field="*{cognome}" th:value="*{cognome}" required /></span>
-			</div>
-			<div>
-				<span>Data di nascita:</span> <span><input type="date"
-					th:field="*{dataDiNascita}" th:value="*{dataDiNascita}" required /></span>
-			</div>
-			<div>
-				<span><input type="hidden"
-					th:field="*{id}" /></span>
-			</div>
-			<div>
-				<span><button type="submit">Invia</button></span>
-			</div>
+	<section>
+		<div>
+			<h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T.
+				Astral!</h3>
 		</div>
-	</form>
+		<form th:action="@{/modificaAbbonato}" method="POST"
+			th:object="${user}">
+			<div class="container">
+				<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" th:field="*{nome}"
+							th:value="*{nome}" required /></td>
+					</tr>
+					<tr>
+						<td>Cognome:</td>
+						<td><input type="text" th:field="*{cognome}"
+							th:value="*{cognome}" required  /></td>
+					</tr>
+					<tr>
+						<td>Data di nascita:</td>
+						<td><input type="date" th:field="*{dataDiNascita}"
+							th:value="*{dataDiNascita}" required /></td>
+					</tr>
+					<tr>
+						<td><input type="hidden" th:field="*{id}" /></td>
+					</tr>
+					<tr>
+						<td><button type="submit">Invia</button></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</section>
+	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>

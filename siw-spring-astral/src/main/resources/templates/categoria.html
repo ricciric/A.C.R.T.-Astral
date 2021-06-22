@@ -11,7 +11,7 @@
 	<div class="anagrafica">
 		<ul id="anagrafica">
 			<li th:text="${categoria.descrizione}">descrizione</li>
-			<li>Allenatore: <span th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">allenatore</span></li>
+			<li>Allenatore: <span th:if="${categoria.allenatore.ruolo} == 'Allenatore'" th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">allenatore</span></li>
 		</ul>
 	</div>
 	<div id="giocatore">CALCIATORI</div>
