@@ -10,8 +10,6 @@ public class DirigenteService {
 
 	@Autowired
 	private DirigenteRepository dirigenteRepository;
-	public DirigenteService() {
-		// TODO Auto-generated constructor stub
-	}
+
 
 }
