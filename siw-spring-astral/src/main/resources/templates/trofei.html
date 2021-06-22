@@ -3,12 +3,15 @@
 <head th:replace="/fragments/base.html :: headerfiles(trofeo)">
 </head>
 <body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
   <div id = "container">
 	<div class = "trofeo" th:each="trofeo : ${trofei}">
       <div class= "nome_trofeo" th:text="${trofeo.nome}">Champions</div>
-	  <div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}} + '.jpg'">immagine</div>
+	  <div><img th:src="@{'/images/trofeo/' + ${trofeo.nome}} + '.jpg'"></div>
 	  <div class="numeroVittorie" th:text="${{trofeo.numeroVittorie}}">10</div>
 	</div>
   </div>
+  	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>
