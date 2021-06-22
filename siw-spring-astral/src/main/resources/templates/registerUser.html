@@ -6,7 +6,7 @@
 	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<section>
 		<div id="corpo">
-			<h1>Registrazione</h1>
+			<h1>Sottoscrivi abbonamento</h1>
 			<form th:action="@{/register}" method="POST">
 				<table>
 					<tr>
@@ -38,8 +38,13 @@
 							th:errors="${user.cognome}" th:style="'color:red'"></td>
 					</tr>
 					<tr>
+						<td>Data di nascita</td>
+						<td><input type="date" placeholder="dataDiNascita" required
+							th:field="${user.dataDiNascita}" /></td>
+					</tr>
+					<tr>
 						<td>
-							<button type="submit">Registra</button>
+							<button type="submit">Abbonati!</button>
 						</td>
 					</tr>
 				</table>

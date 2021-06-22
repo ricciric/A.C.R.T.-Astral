@@ -8,19 +8,23 @@
 		<h3>Iscriviti ora e diventa un nuovo abbonato della A.C.R.T.
 			Astral!</h3>
 	</div>
-	<form th:action="@{/abbonato}" method="POST">
+	<form th:action="@{/modificaAbbonato}" method="POST" th:object="${user}">
 		<div class="container">
 			<div>
-				<span>Nome:</span> <span><input type="text"
-					th:field="${abbonato.nome}" required /></span>
+				<span>Nome:</span> <span><input type="text" 
+					th:field="*{nome}" th:value="*{nome}" required /></span>
 			</div>
 			<div>
 				<span>Cognome:</span> <span><input type="text"
-					th:field="${abbonato.cognome}" required /></span>
+					th:field="*{cognome}" th:value="*{cognome}" required /></span>
 			</div>
 			<div>
 				<span>Data di nascita:</span> <span><input type="date"
-					th:field="${abbonato.dataDiNascita}" required /></span>
+					th:field="*{dataDiNascita}" th:value="*{dataDiNascita}" required /></span>
+			</div>
+			<div>
+				<span><input type="hidden"
+					th:field="*{id}" /></span>
 			</div>
 			<div>
 				<span><button type="submit">Invia</button></span>

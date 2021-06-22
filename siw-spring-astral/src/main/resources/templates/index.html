@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:replace="/fragments/base.html :: headerfiles(home)">
 </head>
 <body>
@@ -57,8 +58,15 @@
 	</div>
 	<hr>
 	<div>motivazione ancora abbonamento</div>
-	<div><a th:href="'/register'">registrati</a></div>
-	<div><a th:href="'/login'">login</a></div>
+	<div sec:authorize="isAnonymous()">
+		<a th:href="'/register'">Abbonati</a>
+	</div>
+	<div sec:authorize="isAnonymous()">
+		<a th:href="'/login'">Login</a>
+	</div>
+	<div sec:authorize="isAuthenticated()">
+		<a th:href="'/logout'">Logout</a>
+	</div>
 	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>

@@ -2,23 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/fragments/base.html :: headerfiles(categoria)">
 <body>
-  <h1><span th:text="${categoria.nome}">a</span></h1>
-  <div id = "immagine"> a
-    </div>
-  <div class = "anagrafica">
-    <ul id = "anagrafica">
-      <li th:text="${categoria.nome}">nome</li>
-      <li th:text="${categoria.descrizione}">descrizione</li>
-      <li th:text="${categoria.allenatore}">allenatore</li>
-    </ul>
-  </div>
-  <div id = "giocatore">
-    CALCIATORI
-  </div>
-  <div id = "caratteristiche">
-    <ul th:each="giocatore : ${giocatori}">
-      <li><a th:href ="'/giocatore/' + ${giocatore.id}"><span th:text="|${giocatore.nome} ${giocatore.cognome}|">Nome Cognome</span></a><span th:text="${giocatore.ruolo}"> Ruolo</span></li>
-    </ul>
-  </div>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<h1>
+		<span th:text="${categoria.nome}">a</span>
+	</h1>
+	<div id="immagine">a</div>
+	<div class="anagrafica">
+		<ul id="anagrafica">
+			<li th:text="${categoria.descrizione}">descrizione</li>
+			<li>Allenatore: <span th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">allenatore</span></li>
+		</ul>
+	</div>
+	<div id="giocatore">CALCIATORI</div>
+	<div id="caratteristiche">
+		<ul th:each="giocatore : ${giocatori}">
+			<li><a th:href="'/giocatore/' + ${giocatore.id}"><span
+					th:text="|${giocatore.nome} ${giocatore.cognome}|">Nome
+						Cognome</span></a><span th:text="${giocatore.ruolo}"> Ruolo</span></li>
+		</ul>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
 </html>

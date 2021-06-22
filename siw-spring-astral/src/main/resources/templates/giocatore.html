@@ -22,7 +22,7 @@
 			Ruolo: <span th:text="*{ruolo}">ruolo</span>
 		</div>
 		<div>
-			Categoria: <a href="categoria.html" th:text="*{categoria.nome}">categoria</a>
+			Categoria: <a th:href="'/categoria/' + *{categoria.id}" th:text="*{categoria.nome}">categoria</a>
 		</div>
 	</div>
 </body>

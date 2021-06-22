@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/base.html :: headerfiles(registrazioneSuccesso)">
+<body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<div><h3><span th:text="${user.nome}"></span>, Complimenti hai modificato le tue credenziali!</h3></div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

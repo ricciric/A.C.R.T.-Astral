@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head th:fragment="headerfiles(title)">
 <meta charset="UTF-8" />
 <link th:href="@{/css/base.css}" rel="stylesheet">
@@ -27,7 +28,8 @@
 			<div class="menu">
 				<a href="#"><strong>Abbonamenti</strong></a>
 				<div class="contenutiMenu">
-					<a th:href="@{'/newAbbonato'}">Form abbonato</a> <a
+					<span sec:authorize="isAuthenticated()"><a
+						th:href="@{'/modificaAbbonato'}">Modifica i tuoi dati</a></span> <a
 						href="#motivazione">Perchè abbonarti</a>
 				</div>
 			</div>
