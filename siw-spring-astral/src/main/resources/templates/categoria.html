@@ -12,12 +12,10 @@
 			height=100% />
 	</div>
 	<div class="anagrafica">
-		<ul id="anagrafica">
-			<li th:text="${categoria.descrizione}">descrizione</li>
-			<li><strong>Allenatore: </strong><span
+			<div class="descrizione"><em th:text="${categoria.descrizione}">descrizione</em></div>
+			<div class="allenatore"><strong>Allenatore: </strong><span
 				th:if="${categoria.allenatore.ruolo} == 'Allenatore'"
-				th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">Nome Allenatore</span></li>
-		</ul>
+				th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">Nome Allenatore</span></div>
 	</div>
 	<div id="giocatore">CALCIATORI</div>
 	<div id="caratteristiche">

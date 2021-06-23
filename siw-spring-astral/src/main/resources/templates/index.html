@@ -19,9 +19,8 @@
 	<div class="dirigenza">
 		<h1 class="titolo">Dirigenza</h1>
 		<ul th:each="dirigente : ${dirigenti}">
-			<li
-				th:text="${dirigente.carica} + ': ' + ${dirigente.nome} + ${dirigente.cognome}">lista
-				nomi dirigenza</li>
+			<li class="dirigente" th:text="${dirigente.carica} + ': ' + ${dirigente.nome} + ' ' + ${dirigente.cognome}">lista
+			nomi dirigenza</li>
 		</ul>
 	</div>
 	<hr>
@@ -50,21 +49,21 @@
 		</div>
 		<div id="squadra">
 			<div id="nome">
-				<a th:href="'/categoria/6'">Allievi</a>
-			</div>
-			<div>
-				<a th:href="'/categoria/6'"><img
-					th:src="'images/categoria/' + 'Allievi.jpg'" width=100% height=100% /></a>
-			</div>
-		</div>
-		<div id="squadra">
-			<div id="nome">
 				<a th:href="'/categoria/3'">Giovanissimi</a>
 			</div>
 			<div>
 				<a th:href="'/categoria/3'"><img
 					th:src="'images/categoria/' + 'Giovanissimi.jpg'" width=100%
 					height=100% /></a>
+			</div>
+		</div>
+		<div id="squadra">
+			<div id="nome">
+				<a th:href="'/categoria/6'">Allievi</a>
+			</div>
+			<div>
+				<a th:href="'/categoria/6'"><img
+					th:src="'images/categoria/' + 'Allievi.jpg'" width=100% height=100% /></a>
 			</div>
 		</div>
 		<div id="squadra">
@@ -89,12 +88,13 @@
 	</div>
 	<hr>
 	<div class="abbonamento">
-		<a name="motivazione"></a><em>Perche' dovrei abbonarmi all'A.C.R.T. Astral?
-		Le risposte a questa domanda sono molteplici: la piu' accreditata e'
-		che abbonandoti sostieni la societa' nel suo processo di crescita.
-		Inoltre con il crescere del prestigio della societa' sara' necessario
-		prenotarsi ai campi per osservare le partite e gli eventi dal vivo per
-		seguire i nostri ragazzi. E allora che aspetti? Presto, abbonati!</em>
+		<a name="motivazione"></a><em>Perche' dovrei abbonarmi
+			all'A.C.R.T. Astral? Le risposte a questa domanda sono molteplici: la
+			piu' accreditata e' che abbonandoti sostieni la societa' nel suo
+			processo di crescita. Inoltre con il crescere del prestigio della
+			societa' sara' necessario prenotarsi ai campi per osservare le
+			partite e gli eventi dal vivo per seguire i nostri ragazzi. E allora
+			che aspetti? Presto, abbonati!</em>
 	</div>
 	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>
