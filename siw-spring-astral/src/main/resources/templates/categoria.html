@@ -5,7 +5,7 @@
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<h1>
-		<span th:text="${categoria.nome}">a</span>
+		<span class="nome" th:text="${categoria.nome}">nome categoria</span>
 	</h1>
 	<div id="immagine">
 		<img th:src="'/images/categoria/' + ${categoria.nome} + '.jpg'" width=100%
@@ -22,9 +22,9 @@
 	<div id="giocatore">CALCIATORI</div>
 	<div id="caratteristiche">
 		<ul th:each="giocatore : ${giocatori}">
-			<li><a th:href="'/giocatore/' + ${giocatore.id}"><span
+			<li><a th:href="'/giocatore/' + ${giocatore.id}"><span class="nome"
 					th:text="|${giocatore.nome} ${giocatore.cognome}|">Nome
-						Cognome</span></a>, <span th:text="${giocatore.ruolo}"> Ruolo</span></li>
+						Cognome</span></a> <span class="ruolo" th:text="${giocatore.ruolo}"> Ruolo</span></li>
 		</ul>
 	</div>
 	<footer th:replace="fragments/base.html :: footer"></footer>

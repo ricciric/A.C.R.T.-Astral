@@ -15,8 +15,15 @@ div.anagrafica {
   list-style-type: none;
 }
 
+.nome{
+  color:#b3c6ff;
+  font-size:120%;
+  border-bottom: solid 1px #bbb;
+  padding: 0.9%;
+}
 
 #immagine {
+  border: solid 2px gold;
   background-repeat: no-repeat;
   height: auto;
   margin-left: 5%;
@@ -29,9 +36,17 @@ div.anagrafica {
   text-align: center;
   font-weight: bold;
   font-size: 150%;
+  color:goldenrod;
 }
 
 #caratteristiche {
   margin-top: 4%;
   margin-left: 5%;
+}
+
+.ruolo{
+  font-size:120%;
+  color:darkred;
+  border-bottom: solid 1px #bbb;
+  padding: 0.9%;
 }
