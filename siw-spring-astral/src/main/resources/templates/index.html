@@ -17,8 +17,8 @@
 	<div>
 		<h1>Dirigenza</h1>
 		<span> descrizione Dirigienza</span>
-		<ul>
-			<li>lista nomi dirigenza</li>
+		<ul th:each="dirigente : ${dirigenti}">
+			<li th:text="${dirigente.carica} + ': ' + ${dirigente.nome} + ${dirigente.cognome}">lista nomi dirigenza</li>
 		</ul>
 	</div>
 	<hr>
