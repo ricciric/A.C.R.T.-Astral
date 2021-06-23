@@ -10,7 +10,7 @@ body {
 
 #flex-containerHeader {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 100%;
 }
 
@@ -23,8 +23,8 @@ body {
 div.header {
 	width:7.5%;
 	height: 140px;
-	margin-top: 30px;
-	margin-left: 20px;
+	margin-top: 2%;
+	margin-left: 46.7%;
 }
 
 header {
@@ -44,6 +44,15 @@ p {
 	font-family: cursive;
 	font-size: 20px;
 	text-align: center;
+}
+
+#autenticazione {
+	display: flex;
+	margin-right: 4%;
+}
+
+div.aut {
+	margin-left: 12%;
 }
 
 div.col {
