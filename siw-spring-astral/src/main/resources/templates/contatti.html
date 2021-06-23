@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/base.html :: headerfiles(contatti)">
+<body>
+	<header th:replace="fragments/base.html :: header"></header>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+  <div class="info">
+    Progetto sviluppato da: <div><span class="creatori">Riccardo Marasca, Riccardo Spizzichino, Francesco Mainella</span></div>
+    <div class="corso">Corso universitario Sistemi Informativi su Web tenuto da <span class="prof">Paolo Merialdo</span></div>
+  </div>
+  
+  	<div class="logo">
+		<a class="logo" th:href="@{'/'}"><img th:src="@{/images/logo.jpg}" width=100% height=100%></img></a>
+	</div>
+</body>
+</html> 

@@ -4,8 +4,11 @@
 <body>
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
-	<div th:each="staff : ${staff}">
-		<span th:text="|${staff.nome} ${staff.cognome}|"> <a th:href="@{'/categoria/' + ${staff.categoria.id}}" th:text=${staff.categoria}>Ancora categoria</a></span>
+	<div class="border" th:each="staff : ${staff}">
+		<span class="info" th:text="${staff.nome} + ${staff.cognome} + ' ' + ${staff.ruolo} + ' ' + ${staff.numeroDiTelefono} + ' '">Nome Cognome Ruolo NumeroDiTelefono <a class="categoria" th:href="@{'/categoria/' + ${staff.categoria.id}}" th:text=${staff.categoria}>Ancora categoria</a></span>
+	</div>
+  	<div class="logo">
+		<a class="logo" th:href="@{'/'}"><img th:src="@{/images/logo.jpg}" width=100% height=100%></img></a>
 	</div>
 </body>
 </html>
