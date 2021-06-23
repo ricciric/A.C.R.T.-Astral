@@ -7,18 +7,17 @@
 	<header th:replace="fragments/base.html :: header"></header>
 	<nav th:replace="fragments/base.html :: navigation"></nav>
 	<div id="testoPresentativo">
-		<h1>Chi siamo</h1>
+		<h1 class="titolo">Chi siamo</h1>
 		<em>La societa' A.C.R.T. Astral nasce nel 2021 per un progetto
-			universitario con l'obiettivo di offrire responsabilita', divertimento
-			e prospettiva ad ogni ragazzo. Valorizzare ogni calciatore nel suo
-			aspetto umano e calcistico e il motto della societa'. I colori sociali
-			sono il bianco l'oro e il blu, l'unione tra purezza, divinita' e
-			l'immensita' del cielo.</em>
+			universitario con l'obiettivo di offrire responsabilita',
+			divertimento e prospettiva ad ogni ragazzo. Valorizzare ogni
+			calciatore nel suo aspetto umano e calcistico e il motto della
+			societa'. I colori sociali sono il bianco l'oro e il blu, l'unione
+			tra purezza, divinita' e l'immensita' del cielo.</em>
 	</div>
 	<hr>
-	<div>
-		<h1>Dirigenza</h1>
-		<span> descrizione Dirigienza</span>
+	<div class="dirigenza">
+		<h1 class="titolo">Dirigenza</h1>
 		<ul th:each="dirigente : ${dirigenti}">
 			<li
 				th:text="${dirigente.carica} + ': ' + ${dirigente.nome} + ${dirigente.cognome}">lista
@@ -27,7 +26,7 @@
 	</div>
 	<hr>
 	<p>
-	<h1>Le nostre squadre</h1>
+	<h1 class="titolo">Le nostre squadre</h1>
 	<div id="squadre">
 		<div id="squadra">
 			<div id="nome">
@@ -89,8 +88,13 @@
 		</div>
 	</div>
 	<hr>
-	<div>
-		<a name="motivazione"></a>motivazione ancora abbonamento
+	<div class="abbonamento">
+		<a name="motivazione"></a><em>Perche' dovrei abbonarmi all'A.C.R.T. Astral?
+		Le risposte a questa domanda sono molteplici: la piu' accreditata e'
+		che abbonandoti sostieni la societa' nel suo processo di crescita.
+		Inoltre con il crescere del prestigio della societa' sara' necessario
+		prenotarsi ai campi per osservare le partite e gli eventi dal vivo per
+		seguire i nostri ragazzi. E allora che aspetti? Presto, abbonati!</em>
 	</div>
 	<footer th:replace="fragments/base.html :: footer"></footer>
 </body>

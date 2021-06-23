@@ -7,11 +7,16 @@
 	<h1>
 		<span th:text="${categoria.nome}">a</span>
 	</h1>
-	<div id="immagine">a</div>
+	<div id="immagine">
+		<img th:src="'/images/categoria/' + ${categoria.nome} + '.jpg'" width=100%
+			height=100% />
+	</div>
 	<div class="anagrafica">
 		<ul id="anagrafica">
 			<li th:text="${categoria.descrizione}">descrizione</li>
-			<li>Allenatore: <span th:if="${categoria.allenatore.ruolo} == 'Allenatore'" th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">allenatore</span></li>
+			<li><strong>Allenatore: </strong><span
+				th:if="${categoria.allenatore.ruolo} == 'Allenatore'"
+				th:text="|${categoria.allenatore.nome} ${categoria.allenatore.cognome}|">Nome Allenatore</span></li>
 		</ul>
 	</div>
 	<div id="giocatore">CALCIATORI</div>
@@ -19,7 +24,7 @@
 		<ul th:each="giocatore : ${giocatori}">
 			<li><a th:href="'/giocatore/' + ${giocatore.id}"><span
 					th:text="|${giocatore.nome} ${giocatore.cognome}|">Nome
-						Cognome</span></a><span th:text="${giocatore.ruolo}"> Ruolo</span></li>
+						Cognome</span></a>, <span th:text="${giocatore.ruolo}"> Ruolo</span></li>
 		</ul>
 	</div>
 	<footer th:replace="fragments/base.html :: footer"></footer>

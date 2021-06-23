@@ -1,78 +1,68 @@
-
 #testoPresentativo {
-  text-align: center;
-  margin-bottom:4%;
-  font-size:150%;
+	text-align: center;
+	margin-bottom: 4%;
+	margin-left: 5%; 
+	margin-right : 5%;
+	font-size: 150%;
+	margin-right: 5%;
 }
 
 hr {
-  display: block;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
-.titolo{
-  color:goldenrod;
-  
+.titolo {
+	color: goldenrod;
 }
 
-li{
-  text-align:left;
-  font-size:120%;
-  font-style:italic;
-  color:#b3c6ff;
+li {
+	text-align: left;
+	font-size: 120%;
+	font-style: italic;
+	color: #b3c6ff;
 }
 
 h1 {
-  font-size: 150%;
-  text-align: center;
+	font-size: 150%;
+	text-align: center;
 }
 
-.dirigenza{
-  text-align:center;
-  margin-bottom:4%;
+.dirigenza {
+	text-align: center;
+	margin-bottom: 4%;
 }
 
 #squadre {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom:4%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 4%;
 }
 
 #squadra {
-  display: flex-column;
-  border: 2px solid black;
-  border-radius:15px;
-  width: 25%;
-  margin-left: 5%;
-  margin-top: 3%;
- }
+	display: flex-column;
+	border: 2px solid black;
+	border-radius: 15px;
+	width: 25%;
+	margin-left: 5%;
+	margin-top: 3%;
+}
 
 #nome {
-  margin-top: 2%;
-  text-align: center;
-  margin-bottom: 2%;
-  color:goldenrod;
+	margin-top: 2%;
+	text-align: center;
+	margin-bottom: 2%;
+	color: goldenrod;
 }
 
-.abbonamento{
-  text-align:center;
-  font-size:150%;
+.abbonamento {
+	text-align: center;
+	font-size: 150%;
+	margin-left: 5%;
+	margin-right: 5%; margin-bottom : 2%;
+	text-align: center;
+	margin-bottom: 2%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-c3 e7ju j7

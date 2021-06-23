@@ -17,10 +17,8 @@ div.anagrafica {
 
 
 #immagine {
-  background-image: url(https://i.pinimg.com/originals/99/f7/6b/99f76b3de162688defe73255366828e2.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: auto;
   margin-left: 5%;
   margin-right: 5%;
 }
